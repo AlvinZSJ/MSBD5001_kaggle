@@ -5,7 +5,7 @@ from keras.models import Sequential
 from keras.layers import Dense
 from sklearn.preprocessing import MinMaxScaler
 import matplotlib.pyplot as plt
-
+import argparse
 
 
 def feature_encoding(df_train, feats_onehot):
@@ -73,8 +73,13 @@ def feature_scaling(df_train):
     return df_train
 
 
-df_train = pd.read_csv('train.csv')
-df_test = pd.read_csv('test.csv')
+parser = argparse.ArgumentParser(description='Runtime Prediction')
+parser.add_argument("train_csv", help="filename of training data")
+parser.add_argument("test_csv", help="filename of test data")
+args = parser.parse_args()
+
+df_train = pd.read_csv(args.train_csv)
+df_test = pd.read_csv(args.test_csv)
 
 df_test_id = df_test['id']
 df_test = df_test.drop(columns=['id'])
