@@ -6,7 +6,7 @@ Code for in class kaggle competition MSBD5001
 
 ### Usage
 ```
-usage: runtime_prediction.py [-h] train_csv test_csv
+usage: python3 runtime_prediction.py [-h] train_csv test_csv
 
 Runtime Prediction
 
