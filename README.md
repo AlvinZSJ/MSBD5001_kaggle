@@ -1,6 +1,9 @@
 # MSBD5001_kaggle
 Code for in class kaggle competition MSBD5001
 
+### Language
+Python3
+
 ### Dependencies
 `sklearn, keras, argparse`
 
